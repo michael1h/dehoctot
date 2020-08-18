@@ -1,7 +1,8 @@
 {
-  "name": "photo-gallery",
+  "name": "Toeic Guru",
+  "type": "angular",
   "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
+    "capacitor": {},
+    "cordova": {}
+  }
 }

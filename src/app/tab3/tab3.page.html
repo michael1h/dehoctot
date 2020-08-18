@@ -1,17 +1,32 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="danger">
+    <ion-buttons slot="start">
+      <ion-menu-button style=" background: transparent; " >
+          <ion-icon name="menu-outline" style=" width: 100%; height: 100%; "></ion-icon>
+      </ion-menu-button>
+  </ion-buttons>
     <ion-title>
-      Tab 3
+      Đề thi TOEIC đầy đủ
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+<ion-content color="light" [fullscreen]="true">
+  <div *ngFor="let items of lstBaiTestRutGon" class="row">
+    <div *ngFor="let itemI of items.item;" 
+    [style.--animation-order]="1" style="margin-top: 10px;" class="animation col-sm-4">
+      <div class="toeic-item toeic-item-1">
+        <a routerLink="/full-test/{{itemI.key}}" class="link-wrap minitest">
+            <div class="image">
+                <img src="{{itemI.img}}" alt="Thi thử đề TOEIC ETS 2020 #1">
+            </div>
+            <div class="content">
+                <h3 class="item-title">
+                {{itemI.title}}
+                </h3>
+            </div>
+        </a>
+      </div>
+    </div>
+  </div>
 </ion-content>

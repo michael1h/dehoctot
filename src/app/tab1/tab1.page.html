@@ -1,17 +1,238 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<!-- <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <ion-title>
+        Capacitor AdMob Demo
+      </ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+  
+  <ion-content style="margin-bottom: 100">
+  
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <h1>Banner</h1>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col size="12">
+            <ion-button color="success" (click)="showBanner()">Show Banner</ion-button>
+            <ion-button color="secondary" (click)="showTabBarBanner()">Show TabBar Banner</ion-button>
+            <ion-button color="warning" (click)="hideBanner()">Hide Banner</ion-button>
+            <ion-button color="tertiary" (click)="resumeBanner()">Resume Banner</ion-button>
+            <ion-button color="danger" (click)="removeBanner()">Remove Banner</ion-button>
+        </ion-col>
+      </ion-row>
+  
+  
+      <ion-row>
+        <ion-col size="12">
+          <h1>Interstitial</h1>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row>
+        <ion-col size="12">
+          <ion-button color="tertiary" (click)="loadInterstitial()">Load Intertitial</ion-button>
+          <ion-button color="success" (click)="showInterstitial()">Show Interstitial</ion-button>
+          <ion-button color="tertiary" (click)="loadInterstitialVideo()">Load Interstitial Video</ion-button>
+          <ion-button color="success" (click)="showInterstitialVideo()">Show Interstitial Video</ion-button>
+        </ion-col>
+      </ion-row>
+  
+  
+      <ion-row>
+        <ion-col size="12">
+          <h1>Reward</h1>
+        </ion-col>
+      </ion-row>
+  
+      <ion-row style="padding-bottom: 100px;">
+        <ion-col size="12">
+          <ion-button color="tertiary" (click)="prepareRewardVideo()">Prepare Reward</ion-button>
+          <ion-button color="success" (click)="showRewardVideo()">Show Reward</ion-button>
+        </ion-col>
+      </ion-row>
+  
+    </ion-grid>
+  
+  </ion-content> -->
+  <ion-header [translucent]="true">
+    <ion-toolbar color="danger">
+      <ion-buttons slot="start">
+          <ion-menu-button style=" background: transparent; " >
+              <ion-icon name="menu-outline" style=" width: 100%; height: 100%; "></ion-icon>
+          </ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Đề luyện tập TOEIC - 7 Part
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content color="light" [fullscreen]="true">
+      <div class="row">
+          <div [style.--animation-order]="1" class="animation padding-bottom-5px col-sm-4">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_1.png" alt="Đề luyện thi Toeic part 1" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 1
+                      </h3>
+                      <p>
+                          <span class="desc">Mô tả hình ảnh</span>
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part1" class="button button-1">Mẹo</a>
+                          <a routerLink="/bai-test-rut-gon-part-1" (click)="loadInterstitial()" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_2.png" alt="Đề luyện thi Toeic part 2" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 2
+                      </h3>
+                      <p>
+                          <span class="desc">Hỏi - đáp</span>
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part2" class="button button-1">Mẹo</a>
+                          <a routerLink="/bai-test-rut-gon-part-2" (click)="loadInterstitial()" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_3.png" alt="Đề luyện thi Toeic part 3" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 3
+                      </h3>
+                      <p>
+                          <span class="desc">Đoạn hội thoại</span>
+                          <br />
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part3" class="button button-1">Mẹo</a>
+                          <a routerLink="/bai-test-rut-gon-part/3" (click)="loadInterstitial()" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+      <div class="row">
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_4.png" alt="Đề luyện thi Toeic part 4" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 4
+                      </h3>
+                      <p>
+                          <span class="desc">Bài nói chuyện ngắn</span>
+                          <br />
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part4" class="button button-1">Mẹo</a>
+                          <a routerLink="/bai-test-rut-gon-part/4" (click)="loadInterstitial()" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_5.png" alt="Đề luyện thi Toeic part 5" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 5
+                      </h3>
+                      <p>
+                          <span class="desc">Câu không hoàn chỉnh</span>
+                          <br />
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part5" class="button button-1">Mẹo</a>
+                          <a routerLink="/bai-test-rut-gon-part-5" (click)="loadInterstitial()" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_6.png" alt="Đề luyện thi Toeic part 6" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 6
+                      </h3>
+                      <p>
+                          <span class="desc">Hoàn thành đoạn văn</span>
+                          <br />
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part6" class="button button-1">Mẹo</a>
+                          <a (click)="loadInterstitial()" routerLink="/bai-test-rut-gon-part-6" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row">
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_7.png" alt="Đề luyện thi Toeic part 7" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 7
+                      </h3>
+                      <p>
+                          <span class="desc">Đoạn đơn</span>
+                          <br />
+                      </p>
+                      <div class="btn-group">
+                          <a routerLink="/meo-thi/part7" class="button button-1">Mẹo</a>
+                          <a (click)="loadInterstitial()" routerLink="/bai-test-rut-gon-part-7/1" title="Học phần 7 Đoạn đơn (Không tính kết quả)" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div [style.--animation-order]="1" class="animation col-sm-4 padding-bottom-5px">
+              <div class="toeic-item">
+                  <div class="image">
+                      <img src="https://tienganhmoingay.com/static/ToeicTests/images/de_luyen_tap_phan_8.png" alt="ets" />
+                  </div>
+                  <div class="content">
+                      <h3 class="item-title">
+                          Phần 7
+                      </h3>
+                      <p class="desc">Đoạn kép</p>
+                      <div class="btn-group">
+                          <!-- <a routerLink="/meo-thi/part8" class="button button-1">Mẹo</a> -->
+                          <a routerLink="/bai-test-rut-gon-part-7/0" (click)="loadInterstitial()" class="button">học</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </ion-content>
+  

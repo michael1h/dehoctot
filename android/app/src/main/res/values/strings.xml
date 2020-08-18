@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Toeic Full</string>
+    <string name="title_activity_main">Toeic Full</string>
+    <string name="package_name">toeic.full.pro.lamdt4</string>
+    <string name="custom_url_scheme">toeic.full.pro.lamdt4</string>
+</resources>

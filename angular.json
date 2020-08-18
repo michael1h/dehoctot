@@ -32,6 +32,7 @@
               }
             ],
             "styles": [
+              "src/styles.scss",
               {
                 "input": "src/theme/variables.scss"
               },
@@ -61,8 +62,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "10mb",
+                  "maximumError": "10mb"
                 }
               ]
             },
@@ -98,7 +99,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
-            "styles": [],
+            "styles": [
+              "src/styles.scss"
+            ],
             "scripts": [],
             "assets": [
               {
@@ -177,7 +180,7 @@
   },
   "cli": {
     "defaultCollection": "@ionic/angular-toolkit",
-    "analytics": "bd10bca7-2e44-4c30-8718-93db9c1bd0f7"
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

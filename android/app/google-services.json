@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "828867077179",
+    "firebase_url": "https://toeic-full.firebaseio.com",
+    "project_id": "toeic-full",
+    "storage_bucket": "toeic-full.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828867077179:android:0aad7879e9588e9c92e81e",
+        "android_client_info": {
+          "package_name": "toeic.full.pro.lamdt4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "828867077179-vldv30sabe9moof9ji2b18ieg95a568t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjqV2sFkj_ZFAWOD0xumQkFOFQz7TD86Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "828867077179-vldv30sabe9moof9ji2b18ieg95a568t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -76,6 +76,53 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+.alertCustomCss {
+  .alert-head {
+    background: #b0e48a!important;
+  }
+  .buttonCancelCss .buttonApprove {
+    background: #44a500!important;
+  }
+}
+
+.commingsooncss {
+  .alert-head {
+    text-align: center;
+  }
+}
+
+.modalRateCss {
+  .alert-head {
+    text-align: center;
+  }
+}
+
+.custom-class-modal {
+  margin-top: 50%;
+}
+
+.animation {
+  animation: popIn 0.2s calc(var(--animation-order) * 70ms) both ease-in;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(-8px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+ion-menu-button {
+  --background: transparent !important;
+  --background-focused: transparent !important;
+  --background-hover: transparent !important;
+}
+
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
